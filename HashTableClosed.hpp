@@ -23,11 +23,11 @@ public:
 
     virtual ~HashTableClosed() = default;
 
-    virtual int probeIndex(const T& key, int i) const = 0;
+    virtual int probeIndex(const T& key, int i) = 0;
 
     virtual int insert(const T& key);
 
-    virtual pair<bool, int> search(const T& key) const;
+    virtual pair<bool, int> search(const T& key);
 
     void display() const {
         cout << "Hash Table (size=" << M << ")\n";

@@ -7,9 +7,10 @@ public:
     explicit QuadraticProbing(int size = 101)
         : HashTableClosed<T>(size) {}
 
-    int probeIndex(const T& key, int i) const override {
+    int probeIndex(const T& key, int i)  override {
         // TODO: Implement quadratic probing
-        return 0;
+    return (this->hash1(key) + i * i) % this->M;
+        
     }
 
    

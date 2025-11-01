@@ -11,8 +11,8 @@ public:
         return 7 - (static_cast<int>(key) % 7);
     }
 
-    int probeIndex(const T& key, int i) const override {
+    int probeIndex(const T& key, int i)  override {
         // TODO: Implement double hashing
-        return 0;
+        return (this->hash1(key) + i * hash2(key)) % this->M;
     }
  };
